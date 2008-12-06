@@ -107,6 +107,9 @@ let Tlist_File_Fold_Auto_Close = 1 " Do not close tags for other files
 let Tlist_Enable_Fold_Column = 0 " Do show folding tree
 let Tlist_WinWidth = 40 " 40 cols wide, so I can (almost always) read my functions
 
-
+let g:AutoPreview_enabled =1 
+nnoremap <F5> :AutoPreviewToggle<CR>
+inoremap <F5> <ESC>:AutoPreviewToggle<CR>i
+set updatetime=500 
 
 
