@@ -3,7 +3,7 @@
 " Maintainer:	Dan Savilonis <djs@n-cube.org>
 " Remark:	Used by the vcscommand plugin.
 " License:
-" Copyright (c) 2007 Dan Savilonis
+" Copyright (c) 2008 Dan Savilonis
 "
 " Permission is hereby granted, free of charge, to any person obtaining a copy
 " of this software and associated documentation files (the "Software"), to
@@ -39,7 +39,7 @@ if !exists("did_gitannotate_syntax_inits")
 	hi link gitName Type
 	hi link gitDate Comment
 	hi link gitVer Statement
-	hi link gitLine PreProc
+	hi link gitLine LineNr
 endif
 
 let b:current_syntax="gitAnnotate"
