@@ -103,7 +103,7 @@ map <F11> <ESC>:TlistToggle<RETURN>
 
 let Tlist_Ctags_Cmd = 'ctags' " Location of ctags
 let Tlist_Sort_Type = "name" " order by
-let Tlist_Auto_Open=1 " let the tag list open automagically
+let Tlist_Auto_Open= 0
 let Tlist_Use_Right_Window = 1 " split to the right side of the screen
 let Tlist_Compact_Format = 1 " show small meny
 let Tlist_Exist_OnlyWindow = 1 " if you are the last, kill yourself
@@ -111,7 +111,7 @@ let Tlist_File_Fold_Auto_Close = 1 " Do not close tags for other files
 let Tlist_Enable_Fold_Column = 0 " Do show folding tree
 let Tlist_WinWidth = 40 " 40 cols wide, so I can (almost always) read my functions
 
-let g:AutoPreview_enabled =1 
+let g:AutoPreview_enabled = 0
 nnoremap <F5> :AutoPreviewToggle<CR>
 inoremap <F5> <ESC>:AutoPreviewToggle<CR>i
 set updatetime=500 
