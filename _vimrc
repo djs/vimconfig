@@ -65,7 +65,7 @@ endfunction
 set foldtext=MyFoldText()
 
 " GUI
-if has("gui")
+if has("gui_running")
     if has("win32")
         set guifont=Consolas:h10:cANSI
     else
