@@ -66,7 +66,11 @@ set foldtext=MyFoldText()
 
 " GUI
 if has("gui")
-    set guifont=Consolas:h10:cANSI
+    if has("win32")
+        set guifont=Consolas:h10:cANSI
+    else
+        set guifont=Liberation\ Mono\ 10
+    endif
     set lines=60 columns=160
     set cursorline
 endif
