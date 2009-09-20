@@ -1,1 +1,3 @@
 vimfiles/doc/tags
+*.swp
+*.swo
