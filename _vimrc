@@ -1,4 +1,13 @@
+" File:     .vimrc
+" Author:   Dan Savilonis <djs AT n-cube.org>
+" URL:      http://gitorious.org/djs-tools/vimsettings
+" License:  CC0 <http://creativecommons.org/publicdomain/zero/1.0/>
+"           To the extent possible under law, Dan Savilonis has waived all
+"           copyright and related or neighboring rights to this work. This
+"           work is published from United States.
+
 " Basic options
+"-------------------------------------------------------------------------------
 set nocompatible
 set background=dark
 syntax on
