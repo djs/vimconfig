@@ -4,6 +4,7 @@ set background=dark
 syntax on
 set backspace=2
 set history=1000
+set clipboard=unnamed
 
 " Indentation policy
 set noinsertmode
@@ -73,6 +74,8 @@ if has("gui_running")
     endif
     set lines=60 columns=160
     set cursorline
+
+    set guioptions-=T
 endif
 
 
@@ -114,6 +117,7 @@ let Tlist_WinWidth = 40 " 40 cols wide, so I can (almost always) read my functio
 let g:AutoPreview_enabled = 0
 nnoremap <F5> :AutoPreviewToggle<CR>
 inoremap <F5> <ESC>:AutoPreviewToggle<CR>i
+nnoremap <silent> <F10> :YRShow<CR>
 set updatetime=500 
 
 
