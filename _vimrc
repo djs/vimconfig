@@ -28,7 +28,7 @@ set smartcase
 set tags=./tags;/
 
 " Color scheme
-colorscheme pablo
+colorscheme vividchalk
 
 " Editor configuration
 set list listchars=tab:»·,trail:·
