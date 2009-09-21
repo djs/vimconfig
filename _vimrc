@@ -120,6 +120,11 @@ if has("cscope")
     set cscopetag
 endif
 
+" misc
+"-------------------------------------------------------------------------------
+" inline doxygen highlighting in C files
+let g:load_doxygen_syntax=1
+
 " gui specific options
 "-------------------------------------------------------------------------------
 if has("gui_running")
