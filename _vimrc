@@ -36,6 +36,10 @@ set fileformats=unix,dos
 filetype plugin on
 filetype indent on
 
+" Use hard tabs for Makefiles
+"-------------------------------------------------------------------------------
+autocmd FileType make setlocal noexpandtab
+
 " Case
 "  * Case insensitive search is useful
 "  * smartcase covers 90% of cases, so I'm willing to turn off ignorecase
