@@ -41,6 +41,8 @@ Bundle 'garbas/vim-snipmate.git'
 Bundle 'honza/snipmate-snippets'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
+Bundle 'abudden/TagHighlight'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 " Basic options
 "-------------------------------------------------------------------------------
@@ -360,3 +362,4 @@ let g:tagbar_expand = 1
 
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+let g:indent_guides_guide_size = 1
