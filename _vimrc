@@ -22,15 +22,15 @@ Bundle 'tpope/vim-vividchalk'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+"Bundle 'L9'
+"Bundle 'FuzzyFinder'
 "Bundle 'xolox/vim-open-associated-programs'
 "Bundle 'xolox/vim-shell'
 "Bundle 'xolox/vim-easytags'
 Bundle 'ervandew/supertab'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'thinca/vim-quickrun'
+"Bundle 'thinca/vim-quickrun'
 Bundle 'bogado/file-line'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'jpo/vim-railscasts-theme'
@@ -39,10 +39,14 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim.git'
 Bundle 'garbas/vim-snipmate.git'
 Bundle 'honza/snipmate-snippets'
-Bundle 'majutsushi/tagbar'
+"Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
-Bundle 'abudden/TagHighlight'
-Bundle 'nathanaelkane/vim-indent-guides'
+"Bundle 'abudden/TagHighlight'
+"Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'tpope/vim-surround'
+"Bundle 'jpythonfold.vim'
+"Bundle 'tpope/vim-abolish'
+Bundle 'Command-T'
 
 " Basic options
 "-------------------------------------------------------------------------------
@@ -281,7 +285,7 @@ function! s:Median(nums)
 endfunction
 
 set showmatch
-set nohlsearch
+set hlsearch
 " show matches as they are found
 set incsearch
 set si
@@ -308,15 +312,15 @@ set completeopt=menu,longest,preview
 
 "Folding
 "-------------------------------------------------------------------------------
-set foldenable
-set foldcolumn=4
-set foldopen-=search
-set foldopen-=undo
-" this is a more useful foldtext than the default, but still useless
-function! MyFoldText()
-    return getline(v:foldstart).' '
-endfunction
-set foldtext=MyFoldText()
+"set foldenable
+"set foldcolumn=4
+"set foldopen-=search
+"set foldopen-=undo
+"" this is a more useful foldtext than the default, but still useless
+"function! MyFoldText()
+"    return getline(v:foldstart).' '
+"endfunction
+"set foldtext=MyFoldText()
 
 " Cscope
 "-------------------------------------------------------------------------------
@@ -363,3 +367,23 @@ let g:tagbar_expand = 1
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 let g:indent_guides_guide_size = 1
+
+let mapleader = ","
+nnoremap / /\v
+vnoremap / /\v
+
+inoremap jk <Esc>
+inoremap <Esc> <nop>
+inoremap  <Up>     <nop>
+inoremap  <Down>   <nop>
+inoremap  <Left>   <nop>
+inoremap  <Right>  <nop>
+noremap   <Up>     <nop>
+noremap   <Down>   <nop>
+noremap   <Left>   <nop>
+noremap   <Right>  <nop>
+nnoremap ; :
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
