@@ -47,6 +47,15 @@ Bundle 'tpope/vim-surround'
 "Bundle 'jpythonfold.vim'
 "Bundle 'tpope/vim-abolish'
 Bundle 'Command-T'
+Bundle 'sjl/gundo.vim.git'
+"Bundle 'kevinw/pyflakes-vim'
+Bundle 'nvie/vim-flake8'
+Bundle 'fs111/pydoc.vim'
+Bundle 'jmcantrell/vim-virtualenv'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'CycleColor'
+Bundle 'jeetsukumaran/vim-buffergator'
+Bundle 'AutoComplPop'
 
 " Basic options
 "-------------------------------------------------------------------------------
@@ -152,8 +161,8 @@ set statusline+=\ %P    "percent through file
 set laststatus=2
 
 " status line
-"set cmdheight=1
-"set laststatus=2
+set cmdheight=1
+set laststatus=2
 
 "syntastic settings
 let g:syntastic_enable_signs=1
@@ -365,12 +374,10 @@ let g:tagbar_expand = 1
 "let g:tagbar_usearrows = 1
 
 let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+"let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 let g:indent_guides_guide_size = 1
 
 let mapleader = ","
-nnoremap / /\v
-vnoremap / /\v
 
 inoremap jk <Esc>
 inoremap <Esc> <nop>
@@ -387,3 +394,4 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+nnoremap <leader>g :GundoToggle<CR>
