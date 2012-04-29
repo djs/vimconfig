@@ -7,7 +7,7 @@ def main():
 
 
 def install():
-    vimdir = os.path.expanduser(os.path.join('~', '.vim2'))
+    vimdir = os.path.expanduser(os.path.join('~', '.vim'))
     os.mkdir(vimdir)
     os.mkdir(os.path.join(vimdir, 'tmp'))
     os.mkdir(os.path.join(vimdir, 'bundle'))
