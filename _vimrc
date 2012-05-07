@@ -67,6 +67,7 @@ set history=1000
 set clipboard=unnamed
 set noinsertmode
 set nowrap
+set encoding=utf-8
 
 " Indentation policy
 "  * I prefer 4-space soft indents, but don't want to mess with existing tabs
@@ -96,6 +97,7 @@ augroup END
 "  * Case insensitive search is useful
 "  * smartcase covers 90% of cases, so I'm willing to turn off ignorecase
 "    for the other 10% of the time when I need to search only lowercase
+"  * To search for lowercase only, add \C in search
 "-------------------------------------------------------------------------------
 set ignorecase
 set smartcase
