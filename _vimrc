@@ -55,6 +55,8 @@ Bundle 'flazz/vim-colorschemes'
 Bundle 'CycleColor'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'AutoComplPop'
+Bundle 'tpope/vim-haml'
+Bundle 'kchmck/vim-coffee-script'
 
 " Basic options
 "-------------------------------------------------------------------------------
