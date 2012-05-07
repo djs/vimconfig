@@ -87,7 +87,10 @@ filetype indent on
 
 " Use hard tabs for Makefiles
 "-------------------------------------------------------------------------------
-autocmd FileType make setlocal noexpandtab
+augroup filetype_make
+    autocmd!
+    autocmd FileType make setlocal noexpandtab
+augroup END
 
 " Case
 "  * Case insensitive search is useful
@@ -168,7 +171,10 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
 
 "recalculate the trailing whitespace warning when idle, and after saving
-autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
+augroup whitespace
+    autocmd!
+    autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
+augroup END
 
 "return '[\s]' if trailing white space is detected
 "return '' otherwise
