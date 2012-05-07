@@ -363,7 +363,7 @@ let g:load_doxygen_syntax=1
 if has("gui_running")
     " choose font differently for windows and non-windows
     if has("win32")
-        set guifont=Droid\ Sans\ Mono:h9:cANSI
+        set guifont=Liberation\ Mono:h11:cANSI
         "set guifont=Consolas:h10:cANSI
     else
         set guifont=Liberation\ Mono\ 10
