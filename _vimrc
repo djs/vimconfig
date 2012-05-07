@@ -320,7 +320,7 @@ set sidescrolloff=5
 
 " vim command-line completion
 set wildmenu
-set wildmode=list:longest
+set wildmode=list:longest,full
 set wildignore=*.dll,*.o,*.obj,*.d,*.bak.*.exe,*.pyc,*.swp,*.jpg,*.gif,*.png
 set wildignore+=*.bin,*.swo
 
@@ -402,3 +402,4 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 nnoremap <leader>g :GundoToggle<CR>
+nnoremap <silent> <F2> :let @/=""<cr>
