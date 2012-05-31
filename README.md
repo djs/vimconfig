@@ -2,12 +2,18 @@
 
 # Quick Start
 
-Windows: 
+Windows:
 
     > cd %USERPROFILE%
     > git clone https://github.com/djs/vimconfig.git
     > cd vimconfig
     > python install.py
+
+UNIX:
+    $ cd ~
+    $ git clone https://github.com/djs/vimconfig.git
+    $ cd vimconfig
+    $ python install.py
 
 # Problems
 
