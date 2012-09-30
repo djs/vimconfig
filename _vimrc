@@ -77,6 +77,7 @@ set encoding=utf-8
 "  * Indentation mode is defined by filetype
 "-------------------------------------------------------------------------------
 set expandtab
+set softtabstop=4
 set tabstop=4
 set shiftwidth=4
 set preserveindent
