@@ -64,6 +64,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'skammer/vim-css-color'
 "Bundle 'xolox/vim-shell'
 Bundle 'groenewege/vim-less'
+Bundle 'juvenn/mustache.vim'
 
 " Basic options
 "-------------------------------------------------------------------------------
