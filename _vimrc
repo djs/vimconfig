@@ -242,4 +242,5 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 nnoremap <leader>g :GundoToggle<CR>
 nnoremap <silent> <F2> :let @/=""<cr>
-
+:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+:nnoremap <leader>sv :source $MYVIMRC<cr>
