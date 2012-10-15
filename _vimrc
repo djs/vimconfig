@@ -65,6 +65,9 @@ Bundle 'skammer/vim-css-color'
 "Bundle 'xolox/vim-shell'
 Bundle 'groenewege/vim-less'
 Bundle 'juvenn/mustache.vim'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-commentary'
+Bundle 'tsaleh/vim-matchit'
 
 " Basic options
 "-------------------------------------------------------------------------------
@@ -224,6 +227,9 @@ let g:indent_guides_guide_size = 1
 let mapleader = ","
 
 let Powerline_symbols="unicode"
+
+let g:python_syntax_fold=0
+let g:jedi#use_tabs_not_buffers = 0
 
 inoremap jk <Esc>
 inoremap <Esc> <nop>
