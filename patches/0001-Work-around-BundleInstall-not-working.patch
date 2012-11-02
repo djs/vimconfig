@@ -1,25 +1,25 @@
-From 66d0fb3f24869abf6187ea547cc8b6e864b1a5bc Mon Sep 17 00:00:00 2001
+From 5a668d0480d61cd230e27566d0735946915952a5 Mon Sep 17 00:00:00 2001
 From: Dan Savilonis <djs@n-cube.org>
-Date: Mon, 7 May 2012 01:08:13 -0400
+Date: Fri, 2 Nov 2012 03:19:03 -0400
 Subject: [PATCH] Work around BundleInstall! not working
 
 ---
- autoload/vundle/installer.vim |    2 +-
+ autoload/vundle/installer.vim | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/autoload/vundle/installer.vim b/autoload/vundle/installer.vim
-index 5a1a5ee..b1feec8 100644
+index f7e4375..4d56f94 100644
 --- a/autoload/vundle/installer.vim
 +++ b/autoload/vundle/installer.vim
-@@ -210,7 +210,7 @@ func! s:sync(bang, bundle) abort
+@@ -212,7 +212,7 @@ func! s:sync(bang, bundle) abort
  
      if (has('win32') || has('win64'))
        let cmd = substitute(cmd, '^cd ','cd /d ','')  " add /d switch to change drives
 -      let cmd = '"'.cmd.'"'                          " enclose in quotes
 +      "let cmd = '"'.cmd.'"'                          " enclose in quotes
      endif
-   else
-     let cmd = 'git clone '.a:bundle.uri.' '.shellescape(a:bundle.path())
+ 
+     let get_current_sha = 'cd '.shellescape(a:bundle.path()).' && git rev-parse HEAD'
 -- 
-1.7.10.msysgit.1
+1.7.11.msysgit.1
 
