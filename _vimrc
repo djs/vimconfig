@@ -45,7 +45,6 @@ Bundle 'honza/snipmate-snippets'
 Bundle 'tpope/vim-surround'
 "Bundle 'jpythonfold.vim'
 "Bundle 'tpope/vim-abolish'
-Bundle 'Command-T'
 Bundle 'sjl/gundo.vim.git'
 "Bundle 'kevinw/pyflakes-vim'
 Bundle 'nvie/vim-flake8'
@@ -53,13 +52,12 @@ Bundle 'fs111/pydoc.vim'
 Bundle 'jmcantrell/vim-virtualenv'
 Bundle 'flazz/vim-colorschemes'
 "Bundle 'CycleColor'
-Bundle 'jeetsukumaran/vim-buffergator'
 "Bundle 'AutoComplPop'
 Bundle 'tpope/vim-haml'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'tarmack/vim-python-ftplugin'
-"Bundle 'davidhalter/jedi-vim'
+"Bundle 'tarmack/vim-python-ftplugin'
+Bundle 'davidhalter/jedi-vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'skammer/vim-css-color'
@@ -69,6 +67,9 @@ Bundle 'juvenn/mustache.vim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-commentary'
 Bundle 'tsaleh/vim-matchit'
+Bundle 'majutsushi/tagbar'
+Bundle 'sandeepcr529/Buffet.vim'
+Bundle 'kien/ctrlp.vim'
 
 " Basic options
 "-------------------------------------------------------------------------------
@@ -134,7 +135,7 @@ set ruler
 set number
 
 " status line
-set cmdheight=1
+set cmdheight=2
 set laststatus=2
 
 "syntastic settings
@@ -231,9 +232,11 @@ let Powerline_symbols="unicode"
 
 let g:python_syntax_fold=0
 let g:jedi#use_tabs_not_buffers = 0
+"let g:jedi#show_function_definition = 0
 
 inoremap jk <Esc>
 inoremap <Esc> <nop>
+inoremap <C-c> <Esc>
 inoremap  <Up>     <nop>
 inoremap  <Down>   <nop>
 inoremap  <Left>   <nop>
@@ -249,5 +252,6 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 nnoremap <leader>g :GundoToggle<CR>
 nnoremap <silent> <F2> :let @/=""<cr>
-:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-:nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+noremap <leader>b :Bufferlist<CR>
