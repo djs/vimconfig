@@ -7,10 +7,7 @@ def main():
 
 
 def install():
-    if os.name == 'nt':
-        git = 'git.cmd'
-    else:
-        git = 'git'
+    git = 'git'
 
     vimdir = os.path.expanduser(os.path.join('~', '.vim'))
     os.mkdir(vimdir)
