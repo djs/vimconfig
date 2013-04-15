@@ -38,7 +38,7 @@ Bundle 'skammer/vim-css-color'
 
 " Source Control
 "-------------------------------------------------------------------------------
-Bundle 'tpope/vim-git'
+"Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 
 " Navigation
@@ -53,7 +53,21 @@ set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 
 
+Bundle 'ervandew/supertab'
 
+" clang-complete
+"-------------------------------------------------------------------------------
+Bundle 'Rip-Rip/clang_complete'
+
+"Bundle 'klen/python-mode'
+
+let g:clang_snippets=1
+set concealcursor=inv
+set conceallevel=2
+let g:clang_conceal_snippets=1
+let g:clang_close_preview=1
+let g:clang_snippets_engine = 'clang_complete'
+let g:clang_highlight_errors = 1
 
 if 0
 Bundle 'Lokaltog/vim-easymotion'
@@ -62,7 +76,6 @@ Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'xolox/vim-open-associated-programs'
 "Bundle 'xolox/vim-shell'
 "Bundle 'xolox/vim-easytags'
-Bundle 'ervandew/supertab'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
 "Bundle 'thinca/vim-quickrun'
@@ -97,11 +110,6 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'majutsushi/tagbar'
 endif
 
-" Assume gnome-terminal is 256 color capable
-" Note that this is preferably worked around in my .bashrc
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
 
 " Look and feel
 "-------------------------------------------------------------------------------
@@ -143,9 +151,9 @@ set noshowmode
 set encoding=utf-8
 
 " Indentation policy
+"-------------------------------------------------------------------------------
 "  * I prefer 4-space soft indents, but don't want to mess with existing tabs
 "  * Indentation mode is defined by filetype
-"-------------------------------------------------------------------------------
 set expandtab
 set softtabstop=4
 set tabstop=4
@@ -168,27 +176,22 @@ augroup filetype_make
 augroup END
 
 " Case
+"-------------------------------------------------------------------------------
 "  * Case insensitive search is useful
 "  * smartcase covers 90% of cases, so I'm willing to turn off ignorecase
 "    for the other 10% of the time when I need to search only lowercase
 "  * To search for lowercase only, add \C in search
-"-------------------------------------------------------------------------------
 set ignorecase
 set smartcase
 
 " Tags
 "  * Search for tags recursively in the current directory
 "-------------------------------------------------------------------------------
-"set tags=./tags;/
+set tags=./tags;/
 
 
 " Editor configuration
 "-------------------------------------------------------------------------------
-
-"syntastic settings
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=2
-
 set showmatch
 set hlsearch
 " show matches as they are found
@@ -248,6 +251,11 @@ endif
 " inline doxygen highlighting in C files
 let g:load_doxygen_syntax=1
 
+
+"syntastic settings
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=2
+
 " gui specific options
 "-------------------------------------------------------------------------------
 if has("gui_running")
@@ -273,8 +281,6 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:indent_guides_guide_size = 1
 
 let mapleader = ","
-
-let Powerline_symbols="unicode"
 
 let g:python_syntax_fold=0
 let g:jedi#use_tabs_not_buffers = 0
