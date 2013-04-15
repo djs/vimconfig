@@ -7,20 +7,55 @@
 "           work is published from United States.
 "
 
-" Vundle plugin management
-"-------------------------------------------------------------------------------
 set nocompatible
 filetype off
 
+
+" VUNDLE BUNDLE CONFIGURATION
+"-------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------
+
+" Vundle plugin management
+"-------------------------------------------------------------------------------
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
 Bundle 'gmarik/vundle'
+
+" Color Schemes
+"-------------------------------------------------------------------------------
+"Bundle 'jpo/vim-railscasts-theme'
+Bundle 'dhruvasagar/vim-railscasts-theme'
 Bundle 'tpope/vim-vividchalk'
+Bundle 'vibrantink'
+
+" Syntax Highlighting
+"-------------------------------------------------------------------------------
+Bundle 'plasticboy/vim-markdown'
+Bundle 'tpope/vim-haml'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'skammer/vim-css-color'
+
+" Source Control
+"-------------------------------------------------------------------------------
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
+
+" Navigation
+"-------------------------------------------------------------------------------
+Bundle 'sandeepcr529/Buffet.vim'
+Bundle 'kien/ctrlp.vim'
+
+" Powerline
+"-------------------------------------------------------------------------------
+Bundle 'Lokaltog/powerline'
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
+
+
+
+
+if 0
 Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'
@@ -32,9 +67,6 @@ Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
 "Bundle 'thinca/vim-quickrun'
 Bundle 'bogado/file-line'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'jpo/vim-railscasts-theme'
-Bundle 'vibrantink'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim.git'
 Bundle 'garbas/vim-snipmate.git'
@@ -50,17 +82,12 @@ Bundle 'sjl/gundo.vim.git'
 Bundle 'nvie/vim-flake8'
 Bundle 'fs111/pydoc.vim'
 Bundle 'jmcantrell/vim-virtualenv'
-Bundle 'flazz/vim-colorschemes'
 "Bundle 'CycleColor'
 "Bundle 'AutoComplPop'
-Bundle 'tpope/vim-haml'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'Lokaltog/vim-powerline'
 "Bundle 'tarmack/vim-python-ftplugin'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'tpope/vim-repeat'
-Bundle 'skammer/vim-css-color'
 "Bundle 'xolox/vim-shell'
 Bundle 'groenewege/vim-less'
 Bundle 'juvenn/mustache.vim'
@@ -68,8 +95,38 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-commentary'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'majutsushi/tagbar'
-Bundle 'sandeepcr529/Buffet.vim'
-Bundle 'kien/ctrlp.vim'
+endif
+
+" Assume gnome-terminal is 256 color capable
+" Note that this is preferably worked around in my .bashrc
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
+" Look and feel
+"-------------------------------------------------------------------------------
+set noinsertmode
+set nowrap
+set noshowmode
+
+" Smart visible whitespace. Only highlights bad whitespace (and tabs)
+set list listchars=tab:»·,trail:·
+"set ruler
+set relativenumber
+
+" status line
+set cmdheight=2
+set laststatus=2
+
+" Assume gnome-terminal is 256 color capable
+" Note that this is preferably worked around in my .bashrc
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
+" Color scheme
+"-------------------------------------------------------------------------------
+colorscheme railscasts
 
 " Basic options
 "-------------------------------------------------------------------------------
@@ -82,6 +139,7 @@ set history=1000
 set clipboard=unnamed
 set noinsertmode
 set nowrap
+set noshowmode
 set encoding=utf-8
 
 " Indentation policy
@@ -123,20 +181,9 @@ set smartcase
 "-------------------------------------------------------------------------------
 "set tags=./tags;/
 
-" Color scheme
-"-------------------------------------------------------------------------------
-colorscheme railscasts
 
 " Editor configuration
 "-------------------------------------------------------------------------------
-" Smart visible whitespace. Only highlights bad whitespace (and tabs)
-set list listchars=tab:»·,trail:·
-set ruler
-set number
-
-" status line
-set cmdheight=2
-set laststatus=2
 
 "syntastic settings
 let g:syntastic_enable_signs=1
@@ -151,7 +198,6 @@ set si
 set hidden
 " Print with syntax highlighting!
 set popt+=syntax:y
-set mouse=a
 set shortmess:atI
 set noerrorbells
 " always report number of lines changed
