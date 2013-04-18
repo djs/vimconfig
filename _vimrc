@@ -35,6 +35,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-haml'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'skammer/vim-css-color'
+Bundle 'rodjek/vim-puppet'
 
 " Source Control
 "-------------------------------------------------------------------------------
@@ -45,6 +46,17 @@ Bundle 'tpope/vim-fugitive'
 "-------------------------------------------------------------------------------
 Bundle 'sandeepcr529/Buffet.vim'
 Bundle 'kien/ctrlp.vim'
+
+" Snippets
+"-------------------------------------------------------------------------------
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim.git'
+Bundle 'garbas/vim-snipmate.git'
+Bundle 'honza/snipmate-snippets'
+
+" Macros
+"-------------------------------------------------------------------------------
+Bundle 'tpope/vim-commentary'
 
 " Powerline
 "-------------------------------------------------------------------------------
@@ -80,10 +92,6 @@ Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
 "Bundle 'thinca/vim-quickrun'
 Bundle 'bogado/file-line'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim.git'
-Bundle 'garbas/vim-snipmate.git'
-Bundle 'honza/snipmate-snippets'
 "Bundle 'majutsushi/tagbar'
 "Bundle 'abudden/TagHighlight'
 "Bundle 'nathanaelkane/vim-indent-guides'
@@ -105,7 +113,6 @@ Bundle 'tpope/vim-repeat'
 Bundle 'groenewege/vim-less'
 Bundle 'juvenn/mustache.vim'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-commentary'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'majutsushi/tagbar'
 endif
