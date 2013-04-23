@@ -36,6 +36,10 @@ Bundle 'tpope/vim-haml'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'skammer/vim-css-color'
 Bundle 'rodjek/vim-puppet'
+Bundle 'juvenn/mustache.vim'
+Bundle 'groenewege/vim-less'
+
+let g:vim_markdown_folding_disabled=1
 
 " Source Control
 "-------------------------------------------------------------------------------
@@ -50,9 +54,9 @@ Bundle 'kien/ctrlp.vim'
 " Snippets
 "-------------------------------------------------------------------------------
 Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim.git'
-Bundle 'garbas/vim-snipmate.git'
-Bundle 'honza/snipmate-snippets'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
 
 " Macros
 "-------------------------------------------------------------------------------
@@ -81,14 +85,17 @@ let g:clang_close_preview=1
 let g:clang_snippets_engine = 'clang_complete'
 let g:clang_highlight_errors = 1
 
-if 0
+
+
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'mileszs/ack.vim'
+
+if 0
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'
 "Bundle 'xolox/vim-open-associated-programs'
 "Bundle 'xolox/vim-shell'
 "Bundle 'xolox/vim-easytags'
-Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
 "Bundle 'thinca/vim-quickrun'
 Bundle 'bogado/file-line'
@@ -110,8 +117,6 @@ Bundle 'davidhalter/jedi-vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'tpope/vim-repeat'
 "Bundle 'xolox/vim-shell'
-Bundle 'groenewege/vim-less'
-Bundle 'juvenn/mustache.vim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'majutsushi/tagbar'
@@ -152,9 +157,6 @@ set backspace=2
 set history=1000
 " link clipboard (*) to unnamed register
 set clipboard=unnamed
-set noinsertmode
-set nowrap
-set noshowmode
 set encoding=utf-8
 
 " Indentation policy
