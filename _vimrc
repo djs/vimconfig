@@ -222,7 +222,7 @@ set sidescrolloff=5
 set wildmenu
 set wildmode=list:longest,full
 set wildignore=*.dll,*.o,*.obj,*.d,*.bak.*.exe,*.pyc,*.swp,*.jpg,*.gif,*.png
-set wildignore+=*.bin,*.swo
+set wildignore+=*.bin,*.swo,*.dbo
 
 set completeopt=menu,longest,preview
 
