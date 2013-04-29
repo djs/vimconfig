@@ -74,6 +74,12 @@ Bundle 'ervandew/supertab'
 
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'mileszs/ack.vim'
+Bundle 'sjl/gundo.vim.git'
+
+" Jedi
+"-------------------------------------------------------------------------------
+Bundle 'davidhalter/jedi-vim'
+let g:jedi#show_function_definition = "0"
 
 if 0
 "Bundle 'L9'
@@ -90,7 +96,6 @@ Bundle 'bogado/file-line'
 Bundle 'tpope/vim-surround'
 "Bundle 'jpythonfold.vim'
 "Bundle 'tpope/vim-abolish'
-Bundle 'sjl/gundo.vim.git'
 "Bundle 'kevinw/pyflakes-vim'
 Bundle 'nvie/vim-flake8'
 Bundle 'fs111/pydoc.vim'
@@ -98,7 +103,6 @@ Bundle 'jmcantrell/vim-virtualenv'
 "Bundle 'CycleColor'
 "Bundle 'AutoComplPop'
 "Bundle 'tarmack/vim-python-ftplugin'
-Bundle 'davidhalter/jedi-vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'tpope/vim-repeat'
 "Bundle 'xolox/vim-shell'
