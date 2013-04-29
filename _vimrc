@@ -71,21 +71,6 @@ set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 Bundle 'ervandew/supertab'
 
-" clang-complete
-"-------------------------------------------------------------------------------
-Bundle 'Rip-Rip/clang_complete'
-
-"Bundle 'klen/python-mode'
-
-let g:clang_snippets=1
-set concealcursor=inv
-set conceallevel=2
-let g:clang_conceal_snippets=1
-let g:clang_close_preview=1
-let g:clang_snippets_engine = 'clang_complete'
-let g:clang_highlight_errors = 1
-
-
 
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'mileszs/ack.vim'
