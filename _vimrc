@@ -51,6 +51,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'sandeepcr529/Buffet.vim'
 Bundle 'kien/ctrlp.vim'
 
+let g:ctrlp_by_filename = 1
+let g:ctrlp_lazy_update = 200
+
 " Snippets
 "-------------------------------------------------------------------------------
 Bundle 'MarcWeber/vim-addon-mw-utils'
