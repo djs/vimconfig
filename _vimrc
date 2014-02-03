@@ -50,8 +50,11 @@ NeoBundle 'zeis/vim-kolor'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'tpope/vim-fugitive.git'
-NeoBundle 'Townk/vim-autoclose'
-NeoBundle 'Hello'
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'tpope/vim-vinegar.git'
+NeoBundle 'tpope/vim-characterize.git'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'dbakker/vim-lint'
 
 " GUI Font and Layout Configuration {{{
 if has("gui_running")
@@ -72,5 +75,17 @@ endif
 syntax on
 colorscheme elive
 set laststatus=2
+set hidden
+set incsearch
+set backspace=indent,eol,start
+set encoding=utf-8
+set noerrorbells
+set visualbell
+set nobackup
+set noswapfile
+
+" use ack for grepping
+set grepprg=ack
+set grepformat=%f:%l:%m
 
 " vim:fdm=marker
