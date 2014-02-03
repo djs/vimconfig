@@ -18,8 +18,10 @@ def install():
         os.path.join(vimdir, 'bundle', 'vundle')])
 
     if os.name == 'nt':
+        if os.path.exists(os.path.join(os.path.expanduser('~'), '_vimrc')):
+            os.remove(os.path.join(os.path.expanduser('~'), '_vimrc'))
         subprocess.check_call([os.path.expandvars('$COMSPEC'), '/c', 'mklink',
-            os.path.join(os.path.expanduser('~'), '_vimrc'), os.path.join('vimconfig', '_vimrc')])
+            os.path.join(os.path.expanduser('~'), '_vimrc'), os.path.join(os.path.expanduser('~'), 'vimconfig', '_vimrc')])
     else:
         os.chdir(os.path.expanduser('~'))
         os.symlink(os.path.expanduser('~/vimconfig/_vimrc'), os.path.expanduser('~/.vimrc'))
