@@ -55,7 +55,18 @@ NeoBundle 'tpope/vim-vinegar.git'
 NeoBundle 'tpope/vim-characterize.git'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'dbakker/vim-lint'
+NeoBundleLazy 'syngan/vim-vimlint', {
+    \ 'depends' : 'ynkdir/vim-vimlparser',
+    \ 'autoload' : {
+    \ 'functions' : 'vimlint#vimlint'}}
+NeoBundle 'junegunn/goyo.vim'
+"NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'drmikehenry/vim-fontsize'
+NeoBundle 'amix/vim-zenroom2'
+let g:gitgutter_realtime=0
 
+let delimitMate_smart_quotes=1
+let delimitMate_expand_cr=2
 " GUI Font and Layout Configuration {{{
 if has("gui_running")
     " choose font differently for windows and non-windows
@@ -87,5 +98,8 @@ set noswapfile
 " use ack for grepping
 set grepprg=ack
 set grepformat=%f:%l:%m
+
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " vim:fdm=marker
