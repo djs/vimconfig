@@ -68,6 +68,8 @@ colorscheme elive
 " Source Control {{{
 "-------------------------------------------------------------------------------
 NeoBundle 'tpope/vim-fugitive.git'
+NeoBundle 'mhinz/vim-signify'
+let g:signify_vcs_list = ['git']
 " }}}
 
 " Navigation {{{
@@ -76,10 +78,6 @@ if has('lua')
   NeoBundle 'Shougo/neocomplete.vim'
   let g:neocomplete#enable_at_startup = 1
   let g:neocomplete#enable_auto_select = 0
-  "augroup neocomplete_python
-  "    autocmd!
-  "    autocmd FileType python NeoCompleteLock
-  "augroup END
 else
   NeoBundle 'Shougo/neocomplcache.vim'
   let g:neocomplcache_enable_at_startup = 1
@@ -96,6 +94,15 @@ NeoBundle 'ervandew/supertab'
 "let g:SuperTabDefaultCompletionType = "context"
 
 NeoBundle 'sandeepcr529/Buffet.vim'
+
+NeoBundle 'majutsushi/tagbar'
+let g:tagbar_iconchars = ['►', '▼'] 
+
+NeoBundle 'xolox/vim-shell', {
+            \ 'depends' : 'xolox/vim-misc' }
+NeoBundle 'xolox/vim-easytags', {
+            \ 'depends' : 'xolox/vim-misc' }
+let g:easytags_dynamic_files = 1
 
 set noshowmode
 set tags=./tags;/
