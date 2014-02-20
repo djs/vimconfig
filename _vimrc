@@ -60,9 +60,9 @@ colorscheme elive
 
 " Display {{{
 "-------------------------------------------------------------------------------
-NeoBundle 'drmikehenry/vim-fontsize'
-NeoBundle 'tpope/vim-characterize.git'
-NeoBundle 'junegunn/goyo.vim'
+"NeoBundle 'drmikehenry/vim-fontsize'
+"NeoBundle 'tpope/vim-characterize.git'
+"NeoBundle 'junegunn/goyo.vim'
 " }}}
 
 " Source Control {{{
@@ -75,15 +75,27 @@ NeoBundle 'tpope/vim-fugitive.git'
 if has('lua')
   NeoBundle 'Shougo/neocomplete.vim'
   let g:neocomplete#enable_at_startup = 1
+  let g:neocomplete#enable_auto_select = 0
+  "augroup neocomplete_python
+  "    autocmd!
+  "    autocmd FileType python NeoCompleteLock
+  "augroup END
 else
   NeoBundle 'Shougo/neocomplcache.vim'
   let g:neocomplcache_enable_at_startup = 1
 endif
 
-NeoBundle 'tpope/vim-vinegar.git'
+NeoBundle 'davidhalter/jedi-vim'
+let g:jedi#popup_select_first = 0
+let g:jedi#use_tabs_not_buffers = 0
+
+"NeoBundle 'tpope/vim-vinegar.git'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ervandew/supertab'
+"let g:SuperTabDefaultCompletionType = "context"
+
+NeoBundle 'sandeepcr529/Buffet.vim'
 
 set noshowmode
 set tags=./tags;/
@@ -92,11 +104,11 @@ set tags=./tags;/
 
 " Syntax Checking {{{
 "-------------------------------------------------------------------------------
-NeoBundle 'scrooloose/syntastic'
-NeoBundleLazy 'syngan/vim-vimlint', {
-    \ 'depends' : 'ynkdir/vim-vimlparser',
-    \ 'autoload' : {
-    \ 'functions' : 'vimlint#vimlint'}}
+"NeoBundle 'scrooloose/syntastic'
+"NeoBundleLazy 'syngan/vim-vimlint', {
+"    \ 'depends' : 'ynkdir/vim-vimlparser',
+"    \ 'autoload' : {
+"    \ 'functions' : 'vimlint#vimlint'}}
 " }}}
 
 
@@ -105,6 +117,8 @@ NeoBundleLazy 'syngan/vim-vimlint', {
 NeoBundle 'Raimondi/delimitMate'
 let delimitMate_smart_quotes=1
 let delimitMate_expand_cr=2
+
+NeoBundle 'tpope/vim-commentary'
 
 set laststatus=2
 set hidden
@@ -119,6 +133,9 @@ set nobackup
 set noswapfile
 set number
 set nowrap
+set history=1000
+" link clipboard (*) to unnamed register
+set clipboard=unnamed
 
 set shiftwidth=4
 set expandtab
@@ -180,6 +197,13 @@ nnoremap <leader>r :<C-u>Unite -buffer-name=mru     -start-insert file_mru<cr>
 nnoremap <leader>o :<C-u>Unite -buffer-name=outline -start-insert outline<cr>
 nnoremap <leader>y :<C-u>Unite -buffer-name=yank    history/yank<cr>
 nnoremap <leader>e :<C-u>Unite -buffer-name=buffer  buffer<cr>
+
+nnoremap <leader>b :Bufferlist<CR>
+
+augroup neocomplete_python
+    autocmd!
+    autocmd FileType python NeoCompleteLock
+augroup END
 
 NeoBundleCheck
 
