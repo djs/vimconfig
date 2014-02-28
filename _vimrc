@@ -175,6 +175,9 @@ endif
 set grepprg=ack
 set grepformat=%f:%l:%m
 
+" highlight notable whitespace
+set list listchars=tab:»·,trail:·
+
 
 " vimrc editing {{{
 "-------------------------------------------------------------------------------
