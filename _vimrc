@@ -7,17 +7,16 @@
 "           work is published from United States.
 "
 
-set nocompatible
-
 " NeoBundle plugin management {{{
 " https://github.com/Shougo/neobundle.vim
 "-------------------------------------------------------------------------------
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-call neobundle#rc(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
+if has('vim_starting')
+    set nocompatible
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-filetype plugin indent on
-NeoBundleCheck
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
@@ -219,10 +218,12 @@ augroup neocomplete_python
     autocmd FileType python NeoCompleteLock
 augroup END
 
+call neobundle#end()
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+filetype plugin indent on
 NeoBundleCheck
 
 " vim:fdm=marker
