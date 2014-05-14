@@ -53,6 +53,7 @@ NeoBundle 'hdima/python-syntax'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'rodjek/vim-puppet'
 NeoBundle 'juvenn/mustache.vim'
+NeoBundle 'othree/html5.vim'
 
 syntax on
 colorscheme elive
@@ -100,8 +101,8 @@ let g:tagbar_iconchars = ['►', '▼']
 
 NeoBundle 'xolox/vim-shell', {
             \ 'depends' : 'xolox/vim-misc' }
-NeoBundle 'xolox/vim-easytags', {
-            \ 'depends' : 'xolox/vim-misc' }
+"NeoBundle 'xolox/vim-easytags', {
+"            \ 'depends' : 'xolox/vim-misc' }
 let g:easytags_dynamic_files = 1
 
 set noshowmode
@@ -126,6 +127,9 @@ let delimitMate_smart_quotes=1
 let delimitMate_expand_cr=2
 
 NeoBundle 'tpope/vim-commentary'
+
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 
 set laststatus=2
 set hidden
@@ -214,6 +218,10 @@ augroup neocomplete_python
     autocmd!
     autocmd FileType python NeoCompleteLock
 augroup END
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 NeoBundleCheck
 
