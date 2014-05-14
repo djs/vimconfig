@@ -28,6 +28,9 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 " }}}
 
+" Bundles {{{
+"-------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------
 NeoBundle 'Shougo/unite.vim'
 
 " Color Schemes {{{
@@ -54,8 +57,6 @@ NeoBundle 'rodjek/vim-puppet'
 NeoBundle 'juvenn/mustache.vim'
 NeoBundle 'othree/html5.vim'
 
-syntax on
-colorscheme elive
 " }}}
 
 " Display {{{
@@ -69,40 +70,29 @@ colorscheme elive
 "-------------------------------------------------------------------------------
 NeoBundle 'tpope/vim-fugitive.git'
 NeoBundle 'mhinz/vim-signify'
-let g:signify_vcs_list = ['git']
 " }}}
 
 " Navigation {{{
 "-------------------------------------------------------------------------------
 if has('lua')
   NeoBundle 'Shougo/neocomplete.vim'
-  let g:neocomplete#enable_at_startup = 1
-  let g:neocomplete#enable_auto_select = 0
-else
-  NeoBundle 'Shougo/neocomplcache.vim'
-  let g:neocomplcache_enable_at_startup = 1
 endif
 
 NeoBundle 'davidhalter/jedi-vim'
-let g:jedi#popup_select_first = 0
-let g:jedi#use_tabs_not_buffers = 0
 
 "NeoBundle 'tpope/vim-vinegar.git'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ervandew/supertab'
-"let g:SuperTabDefaultCompletionType = "context"
 
 NeoBundle 'sandeepcr529/Buffet.vim'
 
 NeoBundle 'majutsushi/tagbar'
-let g:tagbar_iconchars = ['►', '▼'] 
 
 NeoBundle 'xolox/vim-shell', {
             \ 'depends' : 'xolox/vim-misc' }
 "NeoBundle 'xolox/vim-easytags', {
 "            \ 'depends' : 'xolox/vim-misc' }
-let g:easytags_dynamic_files = 1
 
 set noshowmode
 set tags=./tags;/
@@ -122,13 +112,45 @@ set tags=./tags;/
 " Editing {{{
 "-------------------------------------------------------------------------------
 NeoBundle 'Raimondi/delimitMate'
-let delimitMate_smart_quotes=1
-let delimitMate_expand_cr=2
 
 NeoBundle 'tpope/vim-commentary'
 
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
+" }}}
+
+" }}}
+
+" End of NeoBundle plugin management {{{
+call neobundle#end()
+filetype plugin indent on
+NeoBundleCheck
+" }}}
+
+" Plugin Configuration {{{
+"-------------------------------------------------------------------------------
+let delimitMate_smart_quotes=1
+let delimitMate_expand_cr=2
+
+let g:signify_vcs_list = ['git']
+
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_auto_select = 0
+
+let g:jedi#popup_select_first = 0
+let g:jedi#use_tabs_not_buffers = 0
+
+let g:tagbar_iconchars = ['►', '▼'] 
+
+let g:easytags_dynamic_files = 1
+
+"let g:SuperTabDefaultCompletionType = "context"
+" }}}
+
+" General Configuration {{{
+"-------------------------------------------------------------------------------
+syntax on
+colorscheme elive
 
 set laststatus=2
 set hidden
@@ -154,8 +176,10 @@ set wildmenu
 set wildmode=list:full
 set wildignore=*.dll,*.o,*.obj,*.d,*.bak.*.exe,*.pyc,*.swp,*.jpg,*.gif,*.png
 set wildignore+=*.bin,*.swo,*.dbo,*.dba
-" }}}
 
+" highlight notable whitespace
+set list listchars=tab:»·,trail:·
+" }}}
 
 " GUI Font and Layout Configuration {{{
 if has("gui_running")
@@ -173,14 +197,12 @@ if has("gui_running")
 endif
 " }}}
 
-
+" grep {{{
+"-------------------------------------------------------------------------------
 " use ack for grepping
 set grepprg=ack
 set grepformat=%f:%l:%m
-
-" highlight notable whitespace
-set list listchars=tab:»·,trail:·
-
+" }}}
 
 " vimrc editing {{{
 "-------------------------------------------------------------------------------
@@ -201,7 +223,7 @@ nnoremap <leader>xv :vsplit $TRUEVIMRC<cr>
 nnoremap <leader>sv :source $TRUEVIMRC<cr>
 " }}}
 
-" Things I'm testing
+" {{{ Things I'm testing
 let g:unite_source_history_yank_enable = 1
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 nnoremap <leader>t :<C-u>Unite -buffer-name=files   -start-insert file_rec/async:!<cr>
@@ -213,17 +235,12 @@ nnoremap <leader>e :<C-u>Unite -buffer-name=buffer  buffer<cr>
 
 nnoremap <leader>b :Bufferlist<CR>
 
-augroup neocomplete_python
-    autocmd!
-    autocmd FileType python NeoCompleteLock
-augroup END
-
-call neobundle#end()
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-filetype plugin indent on
-NeoBundleCheck
+if has('lua')
+    augroup neocomplete_python
+        autocmd!
+        autocmd FileType python NeoCompleteLock
+    augroup END
+endif
+" }}}
 
 " vim:fdm=marker
